@@ -1,0 +1,177 @@
+/* html {
+  font-size: 62.5%;
+} */
+
+body {
+  margin: 0;
+  background: blue;
+  overflow: hidden;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+body * {
+  margin-top: 0;
+  padding: 0;
+}
+
+/* h1,
+h2,
+h3 {
+  font-size: ;
+} */
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 420px;
+  height: 420px;
+  border: solid black;
+  position: relative;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid div {
+  width: 15px;
+  height: 15px;
+  /* background-color: blue; */
+}
+
+.pac-dot {
+  background-color: orange;
+  border: 5px solid white;
+  box-sizing: border-box;
+}
+
+.wall {
+  background-color: black;
+}
+
+.power-pellet {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.power-pellet::before {
+  content: "🍞";
+}
+
+/* 
+.pacman {
+  background-color: orange;
+  border-radius: 7.5px;
+  border: none;
+  background-image: url(images/pacman_PNG71);
+} */
+
+/* .blinky,
+.pinky,
+.inky,
+.clyde {
+} */
+
+.pacman {
+  background-color: greenyellow;
+  border-radius: 7.5px;
+  border: none;
+  position: relative;
+  transform: rotate(0.4turn);
+  z-index: -1;
+}
+
+.rotate-top {
+  transform: rotate(0.13turn);
+}
+.rotate-bottom {
+  transform: rotate(0.63turn);
+}
+.rotate-left {
+  transform: rotate(0.9turn);
+}
+
+.rotate-right {
+  transform: rotate(0.4turn);
+}
+
+.pacman::before {
+  background-color: greenyellow;
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  z-index: -1;
+}
+.ghost {
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 15px 15px 0 0;
+}
+
+.ghost::after {
+  background-color: #000;
+  width: 4px;
+  height: 4px;
+  border: none;
+  border-radius: 2px;
+  top: 2px;
+  left: 2px;
+  content: "";
+  position: absolute;
+}
+
+.ghost::before {
+  background-color: #000;
+  width: 4px;
+  height: 4px;
+  border: none;
+  border-radius: 2px;
+  top: 2px;
+  left: 2px;
+  content: "";
+  position: absolute;
+}
+
+.blinky {
+  background-color: red;
+  border: none;
+}
+
+.pinky {
+  background-color: pink;
+  border: none;
+}
+
+.inky {
+  background-color: aqua;
+  border: none;
+}
+
+.clyde {
+  background-color: orange;
+  border: none;
+}
+
+.scared-ghost {
+  background-color: black;
+  border: none;
+}
+
+/* .gridcolour {
+  background-color: blue;
+  color: black;
+  text-align: center;
+  margin: 0;
+} */
+
+#restart {
+  display: none;
+}
